@@ -4,12 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const HelloWorld = () =>
+const StatelessComponent = () =>
 {
-  return <p>Hello World!</p>;
+  return <p>Hello from functional/stateless component!</p>;
 }
 
-ReactDOM.render(<HelloWorld />, document.getElementById('root')
+class StatefullComponen extends React.Component
+{
+  //function render gabisa pake format arrow function
+  render()
+  {
+    return <p>Hello from class/statefull component!</p>;
+  }
+}
+
+ReactDOM.render(<StatefullComponen />, document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
